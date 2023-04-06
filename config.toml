@@ -1,3 +1,10 @@
 baseURL = 'https://muchen.ca'
 languageCode = 'en-us'
 title = 'Muchen He'
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params]
+author = 'Muchen He'
+year = 2023
