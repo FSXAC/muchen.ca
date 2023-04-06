@@ -8,3 +8,27 @@ unsafe= true
 [params]
 author = 'Muchen He'
 year = 2023
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  pageref = '/'
+  desc = 'You are here.'
+  disabled = false
+  weight = 10
+[[menu.main]]
+  name = 'Blog'
+  url = '/blog'
+  pageref = 'blog'
+  [menu.main.params]
+    desc = 'Just writing my thoughts down occasionally.'
+    disabled = false
+  weight = 30
+[[menu.main]]
+  name = 'CV'
+  url = '/cv'
+  pageref = 'cv'
+  desc = 'Education and work experience'
+  disabled = true
+  weight = 40

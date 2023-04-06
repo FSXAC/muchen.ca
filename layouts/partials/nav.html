@@ -1,0 +1,12 @@
+<nav class="navbar no-print" aria-label="Main Navigation">
+    <div class="container px-1">
+        {{ $currentPage := . }}
+        {{ $section := .Site.GetPage $currentPage.Section }}
+        {{ range .Site.Menus.main }}
+        <div class="navitem col-4 col-sm-2 mb-2 mx-auto px-2 {{ if $section.IsMenuCurrent "main" . }}is-active{{ end }}
+        ">
+            <a class="btn " href="{{ .URL }}">{{ .Name }}{{ .Params }}</a>
+        </div>
+        {{ end }}
+    </div>
+</nav>
