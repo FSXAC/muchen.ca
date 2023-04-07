@@ -1,0 +1,24 @@
+<section>
+	<h2>Education</h2>
+	<div>
+        {{ range .Site.Data.cv.education }}
+        <div>
+			<h3 class="title my-1">
+				<span class="school float-end">{{ .school }}</span>
+				<span class="edu-degree">
+					{{ .degree }}&nbsp;{{ .major }}, {{ .end }}
+				</span>
+			</h3>
+			<div class="info">
+				<div class="info-desc mb-3">
+					<p>
+						{{ with .description }}
+                        {{ . }}
+                        {{ end }}
+					</p>
+				</div>
+			</div>
+		</div>
+        {{ end }}
+	</div>
+</section>

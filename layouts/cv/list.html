@@ -9,13 +9,13 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --body-text-color: #fff;
         --body-text-color-light: #ccc;
         --body-accent-color: #333;
     }
-}
+} */
 
 .resume-container {
     font-size: 9pt;
@@ -147,10 +147,15 @@ ul.work li:before {
 	<div class="row">
 		<div class="col-sm-3 order-last order-sm-first">
             {{ partial "cv/skills.html" . }}
+            {{ partial "cv/awards.html" . }}
+            {{ partial "cv/certifications.html" . }}
+            {{ partial "cv/extracirricular.html" . }}
 		</div>
 
 		<div class="col-sm-9">
-
+            {{ partial "cv/education.html" . }}
+            {{ partial "cv/experiences.html" . }}
+            {{ partial "cv/projects.html" . }}
 		</div>
 	</div>
 </div>

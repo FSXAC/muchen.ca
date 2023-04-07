@@ -1,0 +1,25 @@
+<section>
+	<h2>Experience</h2>
+    {{ range .Site.Data.cv.experiences.entries }}
+    <div class="exp-entry">
+		<h3 class="title my-1">
+			<span class="company float-end">{{ htmlUnescape .company }}</span>
+			<span class="position">{{ .title }}</span>
+		</h3>
+
+		<div class="info">
+			<div class="info-meta">
+				<p class="mb-0">
+					{{ .start }}-{{ .end }},
+					<span class="job-location">{{ .location }}</span>
+				</p>
+			</div>
+			<div class="info-desc secondary mb-3">
+                {{ with .description }}
+                <p>{{ . }}</p>
+                {{ end }}
+			</div>
+		</div>
+	</div>
+    {{ end }}
+</section>

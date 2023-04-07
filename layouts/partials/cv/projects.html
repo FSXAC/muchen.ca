@@ -1,0 +1,15 @@
+<section>
+	<h2>Projects</h2>
+	<div class="spaced-list">
+        {{ range .Site.Data.projects }}
+        {{ if .worthy }}
+        <p class="m-0">
+            {{ .name }},
+            <span class="secondary">
+                {{ dateFormat "2006" .dates.end }}{{ if .brief }}: {{ .brief }}{{ else if .description }}: {{ .description }}{{ else }}.{{ end }}
+            </span>
+        </p>
+        {{ end }}
+        {{ end }}
+	</div>
+</section>

@@ -1,0 +1,11 @@
+<section>
+	<h2>Certifications</h2>
+	<div class="spaced-list">
+        {{ range .Site.Data.cv.certifications }}
+        <p>
+            {{ .name }},
+            <span class="secondary">{{ .date }}</span>
+        </p>
+        {{ end }}
+	</div>
+</section>
