@@ -1,10 +1,38 @@
+
 {{ define "main" }}
-  <h1>My posts</h1>
-  <ul>
-  {{ range .Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
-    </li>
+<style>
+.mono { font-family: monospace; }
+table.archive { width: 100%; }
+table.archive td:first-child { width: 1%; white-space: nowrap; }
+table.archive td:last-child { width: 1%; white-space: nowrap; }
+table.archive td { vertical-align: top; }
+</style>
+
+<h1>Muchen's Stack Trace</h1>
+<p>Blog archived by date. Occasional memory dump of various things. I have lots of bugs, you might learn a thing or two (or not) from my crash logs.</p>
+
+<!-- Make a table separated by year -->
+<!-- Range through blog section -->
+{{ $year := 0 }}
+{{ $intable := false }}
+{{ range where .Site.RegularPages "Section" "blog" }}
+  {{ if ne $year .Date.Year }}
+    {{ $year = .Date.Year }}
+    {{ if $intable }}
+      </table>
+    {{ end }}
+
+    <h3>{{ $year }}</h3>
+    <table class="archive mb-4">
+    {{ $intable = true }}
   {{ end }}
-  </ul>
+  <tr>
+  <td class="mono">{{ .Date.Format "2006-01-02" }}</td>
+  <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+  <td class="mono">{{ .ReadingTime }} min</td>
+  </tr>
+{{ end }}
+</table>
+
+
 {{ end }}

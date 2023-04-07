@@ -1,14 +1,6 @@
 ---
-title: Home
+title: Muchen's Home
 ---
-
-<style>
-.decorative-bg {
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-}
-</style>
 
 <div class="my-5"></div>
 
