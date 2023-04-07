@@ -9,9 +9,8 @@
 </div>
 {{ end }}
 
-
-
-<link rel="stylesheet" href="/assets/css/doc.css">
+{{ $doc_style := resources.Get "sass/docs.scss" | resources.ToCSS | resources.Minify }}
+<link rel="stylesheet" href="{{ $doc_style.Permalink }}">
 
 <div class="my-4">
 <h1 class="mb-0">{{ .Title }}</h1>
