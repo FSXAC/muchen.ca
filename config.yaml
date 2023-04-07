@@ -1,0 +1,59 @@
+baseURL: 'https://muchen.ca'
+languageCode: 'en-us'
+title: 'Muchen He'
+
+# unsafe render allows inline HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# site parameters
+params:
+  author: Muchen He
+  year: 2023
+
+# menus
+menu:
+
+  # main menu (navbar)
+  main:
+  - name: Home
+    url: /
+    pageRef: /
+    weight: 1
+    params:
+      desc: You are here.
+  - name: Blog
+    url: /blog
+    pageRef: blog
+    weight: 10
+    params:
+      desc: Just writing my thoughts down occasionally.
+  - name: CV
+    url: /cv
+    pageRef: cv
+    weight: 20
+    params:
+      desc: Education and work experience
+      disabled: false
+  - name: Documents
+    url: /documents
+    pageRef: documents
+    weight: 30
+    params:
+      desc: Notes and documents from school work.
+  - name: Projects
+    url: /projects
+    pageRef: projects
+    weight: 40
+    params:
+      desc: My personal and collaborative project showcase.
+      disabled: true
+  - name: Photos
+    url: /photos
+    pageRef: photos
+    weight: 50
+    params:
+      desc: A weekly journal of my personal photography as a hobby.
+      disabled: true
