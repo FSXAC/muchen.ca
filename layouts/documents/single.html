@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<!-- Add watermark if the page has watermark set in front-matter -->
+{{ if .Params.watermark }}
+<div style="position: fixed; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);">
+    <p style="color: rgba(0,0,0,0.1); font-size:6em; transform:rotate(315deg); -webkit-transform:rotate(315deg); font-family: serif">
+    {{ .Params.watermark }}
+    </p>
+</div>
+{{ end }}
+
+{{ $doc_style := resources.Get "sass/docs.scss" | resources.ToCSS | resources.Minify }}
+<link rel="stylesheet" href="{{ $doc_style.Permalink }}">
+
+<div class="my-4">
+<h1 class="mb-0">{{ .Title }}</h1>
+<p class="m-0 pb-2">Updated {{ .Date.Format "2006-01-02" }}</p>
+</div>
+<div id="c-content">
+{{ .Content }}
+</div>
+
+{{ end }}
