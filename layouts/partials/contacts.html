@@ -1,0 +1,11 @@
+<h2>Contacts</h2>
+{{ range $.Site.Data.contacts.default }}
+{{ if .show_homepage }}
+{{ if .icon }}
+<a class="btn" style="min-width: 3em; margin-right: .5em" href="{{ .link }}"><i class="{{ .icon }}"></i></a>
+{{ else }}
+<i>{{ .title }}</i>
+{{ end }}
+{{ end }}
+{{ end }}
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>

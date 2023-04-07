@@ -1,0 +1,37 @@
+INFO 2023/04/07 13:18:20 syncing static files to /
+LOG:   2023/04/07 13:18:21 
+Template Metrics:
+
+LOG:   2023/04/07 13:18:21       cache     cumulative       average       maximum         
+  potential       duration      duration      duration  count  template
+      -----     ----------      --------      --------  -----  --------
+          0  578.503003ms   25.152304ms   51.554057ms     23  blog/single.html
+         47  415.150775ms    6.105158ms     28.9049ms     68  partials/meta.html
+          0   50.213044ms    1.167745ms    4.737232ms     43  _default/list.html
+         89   18.454632ms     271.391µs    3.400023ms     68  partials/header.html
+          0   15.396507ms     342.144µs    1.678011ms     45  _internal/_default/rss.xml
+         88    7.909759ms     116.319µs     599.604µs     68  partials/nav.html
+        100    1.914115ms      28.148µs     520.304µs     68  partials/footer.html
+          0     1.50501ms     1.50501ms     1.50501ms      1  index.html
+          0    1.232009ms    1.232009ms    1.232009ms      1  _internal/_default/sitemap.xml
+          0     433.703µs     433.703µs     433.703µs      1  blog/list.html
+
+LOG:   2023/04/07 13:18:21 Built in 467 ms
+LOG:   2023/04/07 13:18:21 Watching for config changes in /home/mhe/Documents/muchen.ca/config.yaml
+INFO 2023/04/07 13:19:23 syncing static files to /
+LOG:   2023/04/07 13:19:23 
+Template Metrics:
+
+LOG:   2023/04/07 13:19:23       cache     cumulative       average       maximum         
+  potential       duration      duration      duration  count  template
+      -----     ----------      --------      --------  -----  --------
+          0  530.451675ms   23.063116ms   51.388956ms     23  blog/single.html
+         41  364.387621ms    5.358641ms   27.058488ms     68  partials/meta.html
+          0   32.733126ms     761.235µs    1.857112ms     43  _default/list.html
+         89   27.725093ms     407.721µs    7.009048ms     68  partials/header.html
+          0     7.29175ms     7.29175ms     7.29175ms      1  index.html
+         88    6.279046ms      92.338µs     555.404µs     68  partials/nav.html
+        100     958.308µs      14.303µs        84.2µs     67  partials/footer.html
+          0     887.506µs     887.506µs     887.506µs      1  blog/list.html
+
+LOG:   2023/04/07 13:19:23 Built in 437 ms
