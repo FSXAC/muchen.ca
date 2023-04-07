@@ -1,6 +1,7 @@
 ---
-draft: true
+draft: false
 date: 2022-03-06
+watermark: DRAFT
 title: Cleaning up Apple Photos Library with Python
 ---
 
