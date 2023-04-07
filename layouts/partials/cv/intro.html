@@ -1,0 +1,23 @@
+<section style="border-bottom: 1px solid black;">
+	<h1 class="my-0">Muchen He</h1>
+	<p class="mb-1">
+		<!-- Graduate student at UBC working on computer architecture security
+	and hardware performance simulation,
+	with an interest in the full stack of computing
+	from CPU registers to human-computer-interactions. -->
+		Emulating ASIC designs at <a href="https://solidigm.com">Solidigm</a>. Computer
+		architecture graduate student at <a href="https://ubc.ca">UBC</a>.
+	</p>
+	<p class="contact my-2">
+        <!-- Convert above jekyll to hugo -->
+        {{ $contact := site.Data.contacts.default }}
+        {{ range $contact }}
+        {{ if .icon }}
+        {{ if .show_resume }}
+        <i class="{{ .icon }}"></i>
+        <a href="{{ .link }}">{{ .text }}</a>&nbsp;
+        {{ end }}
+        {{ end }}
+        {{ end }}
+	</p>
+</section>

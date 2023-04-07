@@ -1,0 +1,161 @@
+{{ define "main" }}
+
+<style>
+/* Colors as variables */
+:root {
+    --body-text-color: #333;
+    --body-text-color-light: #666;
+    --body-accent-color: #333;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-text-color: #fff;
+        --body-text-color-light: #ccc;
+        --body-accent-color: #333;
+    }
+}
+
+.resume-container {
+    font-size: 9pt;
+    /* line-height: 1.1; */
+}
+
+
+h2 {
+    font-size: 1.5em;
+    color: var(--body-accent-color);
+    margin-bottom: 0.2em;
+    margin-top: 1em;
+    line-height: 1.0;
+}
+
+h3.title {
+    font-size: 1.2em;
+    /* margin-bottom: 0; */
+}
+
+/* div.info {
+    margin-left: 9px;
+    border-left: 1px solid #ccc;
+    padding-left: 16px;
+} */
+
+/* div.spaced-list p {
+    margin-top: 4px;
+} */
+
+/* div.spaced-list p:first-child {
+    margin-top: 0;
+} */
+
+.secondary {
+    color: var(--body-text-color-light);
+}
+
+/* p.job-location,
+p.school-grades {
+    color: var(--body-text-color-light);
+    font-style: italic;
+} */
+
+/* .exp-entry {
+    margin-bottom: 1em;
+} */
+
+/* .info-meta {
+    position: relative;
+    top: -5px;
+} */
+
+/* .info-desc {
+    margin-top: .25em;
+} */
+
+/* Jobs */
+ul.work {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0;
+}
+
+ul.work li:before {
+    content: '•';
+    margin: 0;
+    margin-right: .5em;
+    padding-left: .5em;
+}
+
+/* li.work p {
+    display: inline;
+} */
+
+/* img.company-logo {
+    width: 1.3em;
+    height: 1.3em;
+    margin: 4px;
+    margin-left: 0;
+} */
+
+/* Media query for print */
+@media print {
+
+    header {
+        display: none;
+    }
+
+    /* Hide the h1 heading at the top */
+    h1.heading {
+        display: none;
+    }
+
+    /* Hide navigation */
+    .navbar-nav,
+    .navbar {
+        display: none;
+    }
+
+    /* Hide footer */
+    footer {
+        display: none;
+    }
+
+    .resume-container {
+        background-color: #fff;
+        color: #333;
+    }
+
+    /* Ensure that page break only occurs between blocks of content */
+    .resume-container .exp-entry {
+        page-break-inside: avoid;
+    }
+
+    h2,
+    h3,
+    h4 {
+        page-break-after: avoid;
+    }
+}
+</style>
+
+<div class="my-5 no-print"></div>
+
+<div class="resume-container">
+	{{ partial "cv/intro.html" . }}
+
+	<div class="row">
+		<div class="col-sm-3 order-last order-sm-first">
+            {{ partial "cv/skills.html" . }}
+		</div>
+
+		<div class="col-sm-9">
+
+		</div>
+	</div>
+</div>
+
+<!-- End -->
+<div class="my-5 no-print"></div>
+<script src="https://kit.fontawesome.com/c83e37f840.js" crossorigin="anonymous"></script>
+{{ end }}

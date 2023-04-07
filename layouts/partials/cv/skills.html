@@ -1,0 +1,10 @@
+<section>
+	<h2>Skills</h2>
+	<div class="spaced-list">
+        {{ range .Site.Data.cv.skills }}
+        <p class="skill-category">
+            {{ delimit .skills ", " }}
+        </p>
+        {{ end }}
+	</div>
+</section>
